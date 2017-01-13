@@ -66,7 +66,17 @@ public class ResourceApplication extends WebSecurityConfigurerAdapter {
 		catch(Throwable e)
 		{
 			e.printStackTrace();
-			throw new RuntimeException("gotproblem ", e);
+			//throw new RuntimeException("gotproblem ", e);
+			for(int i=0;i<10;i++)
+			{
+				System.out.println("i=+i");
+				try {
+					Thread.sleep(60000);
+				} catch (InterruptedException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
 		}
 	}
 
