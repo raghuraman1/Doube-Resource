@@ -59,25 +59,10 @@ public class ResourceApplication extends WebSecurityConfigurerAdapter {
 
 	public static void main(String[] args) {
 		System.out.println("About to Run application");
-		try
-		{
+		
 			SpringApplication.run(ResourceApplication.class, args);
-		}
-		catch(Throwable e)
-		{
-			e.printStackTrace();
-			//throw new RuntimeException("gotproblem ", e);
-			for(int i=0;i<10;i++)
-			{
-				System.out.println("i=+i");
-				try {
-					Thread.sleep(60000);
-				} catch (InterruptedException e1) {
-					// TODO Auto-generated catch block
-					e1.printStackTrace();
-				}
-			}
-		}
+			System.out.println("Finished");
+		
 	}
 
 	@Override
